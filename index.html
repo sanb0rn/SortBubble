@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Пузырек</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="sort">
+            <div id="element1" class="element">8</div>
+            <div id="element2" class="element">3</div>
+            <div id="element3" class="element">4</div>
+            <div id="element4" class="element">3</div>
+            <div id="element5" class="element">9</div>
+            <div id="element6" class="element">7</div>
+            <div id="element7" class="element">1</div>
+            <div id="element8" class="element">2</div>
+            <div id="element9" class="element">5</div>
+            <div id="element10" class="element">6</div>
+        </div>
+        <button id="btnSort">Отсортировать</button>
+        <script>
+            let list=document.getElementsByClassName("element");
+            btnSort.onclick = function() {
+                for (let i = 0; i<9; i++) {
+                    for (let j = 0; j < 8; j++) {
+                        if (list[j].innerHTML > list[j + 1].innerHTML) {
+                            let temp = list[i];
+                            list[j] = list[j + 1];
+                            list[j + 1] = temp;
+                            let start = Date.now();
+                            let timer = setInterval(function() {
+                                let timePassed = Date.now() - start;
+                                list[j].style.left = timePassed / 5 + 'px';
+                                list[j+1].style.right = timePassed / 5 + 'px';
+                                if (timePassed > 350) clearInterval(timer);
+                            }, 20);
+                         }
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
