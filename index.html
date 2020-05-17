@@ -31,7 +31,7 @@ and open the template in the editor.
                 for (let i = 0; i<9; i++) {
                     for (let j = 0; j < 8; j++) {
                         if (list[j].innerHTML > list[j + 1].innerHTML) {
-                            let temp = list[i];
+                            let temp = list[j];
                             list[j] = list[j + 1];
                             list[j + 1] = temp;
                             let start = Date.now();
