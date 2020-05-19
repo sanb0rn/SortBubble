@@ -18,12 +18,6 @@ function swap(element1, element2) {
     const style1 = window.getComputedStyle(element1);
     const style2 = window.getComputedStyle(element2);
 
-    const transform1 = style1.getPropertyValue("transform");
-    const transform2 = style2.getPropertyValue("transform");
-
-    element1.style.transform = transform2;
-    element2.style.transform = transform1;
-
     window.requestAnimationFrame(function() {
       setTimeout(() => {
         blockSort.insertBefore(element2, element1);

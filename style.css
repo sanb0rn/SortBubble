@@ -8,10 +8,13 @@ h1 {
 }
 
 .blockSort {
-  position: relative;
-  margin-top: 50px;
+  width: 740px;
+  /* position: relative; */
+  /* margin-top: 50px;
   margin-left: 30%;
-  margin-bottom: 30px;
+  margin-bottom: 30px; */
+  margin: 50px auto;
+
 }
 
 
@@ -31,8 +34,9 @@ h1 {
 
 #btnSort{
   display: block;
-  float: right;
+  /* float: right; */
   font-size:20px;
-  margin-top: 50px ;
-  margin-right: 46%;
+  /* margin-top: 50px ;
+  margin-right: 46%; */
+  margin: 150px auto;
 }
