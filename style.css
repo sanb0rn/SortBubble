@@ -11,7 +11,6 @@ h1 {
   width: 740px;
   /* position: relative; */
   /* margin-top: 50px;
-  margin-left: 30%;
   margin-bottom: 30px; */
   margin: 50px auto;
 
@@ -19,7 +18,7 @@ h1 {
 
 
 .element{
-  background-color: #58b7ff;
+  background-color: deepskyblue;
   float: left;
   width: 50px;
   height: 50px;

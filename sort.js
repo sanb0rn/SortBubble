@@ -32,8 +32,8 @@ btnSort.onclick=async function bubbleSort() {
   let elements = document.querySelectorAll(".element");
   for (let i = 0; i < elements.length - 1; i += 1) {
     for (let j = 0; j < elements.length - i - 1; j += 1) {
-      elements[j].style.backgroundColor = "#FF4949";
-      elements[j + 1].style.backgroundColor = "#FF4949";
+      elements[j].style.backgroundColor = "red";
+      elements[j + 1].style.backgroundColor = "red";
 
       await new Promise(resolve =>
         setTimeout(() => {
@@ -49,12 +49,13 @@ btnSort.onclick=async function bubbleSort() {
         elements = document.querySelectorAll(".element");
       }
 
-      elements[j].style.backgroundColor = "#58B7FF";
-      elements[j + 1].style.backgroundColor = "#58B7FF";
+      elements[j].style.backgroundColor = "deepskyblue";
+      elements[j + 1].style.backgroundColor = "deepskyblue";
     }
 
-    elements[elements.length - i - 1].style.backgroundColor = "#13CE66";
+    elements[elements.length - i - 1].style.backgroundColor = "green";
   }
+  elements[0].style.backgroundColor = "green";
 }
 
 generateNumbers();
